@@ -74,7 +74,6 @@ HttpTemperature.prototype = {
                this.log('HTTP bad response (' + ops.uri + '): ' + error.message);
             } else {
                try {
-                 console.log( parser.toJson(body) );
                  value = this.fieldName === '' ? body : this.format === "xml" ? parser.toJson(body)[this.fieldName] : JSON.parse(body)[this.fieldName];
                   value = Number(value);
                   if (isNaN(value)) {
