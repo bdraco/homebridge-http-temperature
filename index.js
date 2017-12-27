@@ -77,7 +77,7 @@ HttpTemperature.prototype = {
             } else {
                try {
                   if ( this.fieldName ) {
-                     var jsonObj = this.format === "xml" ? parser.toJson(body) : JSON.parse(body);
+                     var jsonObj = this.format === "xml" ? JSON.parse(parser.toJson(body)) : JSON.parse(body);
                      value = get(jsonObj, this.fieldName);
                      console.log(jsonObj);
                      console.log(this.fieldName);
