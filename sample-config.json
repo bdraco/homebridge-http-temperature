@@ -15,8 +15,18 @@
             "accessory": "HttpTemperature",
             "name": "Outside Temperature",
             "url": "http://192.168.1.210/temperature?format=json",
+            "format": "json",
+            "http_method": "GET",
+            "field_name": "temperature"
+        },
+        {
+            "accessory": "HttpTemperature",
+            "name": "Outside Temperature",
+            "url": "http://192.168.1.210/temperature?format=xml",
+            "format": "xml",
             "http_method": "GET",
             "field_name": "temperature"
         }
+
     ]
 }
