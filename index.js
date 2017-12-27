@@ -32,6 +32,7 @@ function HttpTemperature(log, config) {
    this.maxTemperature = config["max_temp"] || DEF_MAX_TEMPERATURE;
    this.units = config["units"] || DEF_UNITS;
    this.auth = config["auth"];
+   this.format = config["format"] || "json";
    this.update_interval = Number( config["update_interval"] || DEF_INTERVAL );
 
    //Check if units field is valid
